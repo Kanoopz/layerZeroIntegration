@@ -1,1 +1,9 @@
-.
+The prcoess for this manualValueGettingApproach is to get each of the individual values to use as parameteres in the _lzSend function.
+
+Process:
+- getValue getBasicAdapter
+- getValue getPayloadToCrossChainTransfer
+- getValue estimateFee (using the basicAdapterValue ([1, 200k]) and the payload to sen in the lzSendFunc as parameters)
+- getValue of getCrossChainaValueToSend (returns the recalculated value of the adapter using the 
+estimateFee returnedValue ([1, estimateFeeReturnedValue])
+- crossChainSend (using the recalculatedValue of adapter with the estimatedFee)
